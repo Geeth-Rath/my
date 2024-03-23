@@ -20,7 +20,7 @@ function Read() {
   },[]);
  
   return (
-    <div>
+    <div className="container ">
       {" "}
       <form class="row g-3" >
         <div className="input-area">

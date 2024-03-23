@@ -33,8 +33,10 @@ function Create() {
 
   };
   return (
-    <div className="container">
-      <form class="row g-3" onSubmit={handlesubmit}>
+    <div className="container ">
+      <div className="create-title p-4 mt-2" > <h1 className="title">Create a User</h1></div>
+     <div className="form-class d-flex justify-content-center align-item-center ">
+     <form class="row g-3 rounded shadow p-4" onSubmit={handlesubmit}>
         <div className="input-area">
           <div class="col-12 ">
             <label for="inputAddress" class="form-label d-flex">
@@ -81,13 +83,14 @@ function Create() {
           </div>
         </div>
 
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">
+        <div class="col-12 d-flex align-item-center justify-content-between">
+          <button type="submit" class="btn btn-primary mx-2 ">
             submit
           </button>
-          <button class="btn btn-secondary">Back</button>
+          <button class="btn btn-secondary ">Back</button>
         </div>
       </form>
+     </div>
     </div>
   );
 }

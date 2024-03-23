@@ -32,8 +32,8 @@ function Home() {
       <div className="d-flex flex-collum justify-content-center align-item-center bg-light">
         <h1 className="title">List of Names</h1>
       </div>
-      <div className="add-button d-flex justify-content-end">
-        <Link className="btn btn-success" to={"/create"}>
+      <div className="add-button d-flex justify-content-end mt-3 mb-3 rounded">
+        <Link className="btn btn-success shadow" to={"/create"}>
           Add +
         </Link>
       </div>
@@ -41,12 +41,22 @@ function Home() {
         <table class="table table-stripend">
           <thead>
             <tr>
-              <th scope="col">Id11</th>
-              <th scope="col">Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Action</th>
+              <th className="col" scope="col">Id</th>
+              <th className="col" scope="col">
+                Name
+              </th>
+              <th className="col" scope="col">
+                Email
+              </th>
+              <th className="col" scope="col">
+                Phone
+              </th>
+              <th className="col" scope="col">
+                orfanization
+              </th>
+              <th className="col-3" scope="col">
+                Action
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -58,27 +68,35 @@ function Home() {
                 <td>{e.phone}</td>
                 <td>{e.website}</td>
                 <td>
-                  <Link
-                    type="button"
-                    to={`/read/${e.id}`}
-                    class="btn btn-primary"
-                  >
-                    Read
-                  </Link>
-                  <Link
-                    type="button"
-                    class="btn btn-success"
-                    to={`/update/${e.id}`}
-                  >
-                    Edit
-                  </Link>
-                  <button
-                    type="button"
-                    class="btn btn-danger"
-                    onClick={(d) => handleDelete(e.id)}
-                  >
-                    Delete
-                  </button>
+                  <div className="row justify-content-sm-start">
+                    <div className=" col-12 col-sm-4 read">
+                      <Link
+                        type="button "
+                        to={`/read/${e.id}`}
+                        class="btn btn-sm btn-primary active me-2"
+                      >
+                        Read
+                      </Link>
+                    </div>
+                    <div className=" col-12 col-sm-4 edit">
+                      <Link
+                        type="button"
+                        class="btn btn-sm btn-md btn-success  me-2 fs-6"
+                        to={`/update/${e.id}`}
+                      >
+                        Edit
+                      </Link>
+                    </div>
+                    <div className=" col-12 col-sm-4  delete">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-md btn-danger me-2  "
+                        onClick={(d) => handleDelete(e.id)}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
                 </td>
               </tr>
             ))}

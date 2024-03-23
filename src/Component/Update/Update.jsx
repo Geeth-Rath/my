@@ -40,8 +40,8 @@ function Update() {
     <div>
       <h1>Update your data</h1>
 
-      <div>
-        <form class="row g-3" onSubmit={handlesubmit}>
+      <div className="container d-flex justify-content-center align-items-center p-5">
+        <form class="row g-3 p-4 rounded shadow" onSubmit={handlesubmit}>
           <div className="input-area">
             <div class="col-12 ">
               <label for="inputAddress" class="form-label d-flex">
@@ -88,8 +88,8 @@ function Update() {
             </div>
           </div>
 
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary">
+          <div class="col-12 d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary mx-2">
               submit
             </button>
             <button class="btn btn-secondary">Back</button>
